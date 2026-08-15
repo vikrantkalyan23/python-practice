@@ -16,7 +16,7 @@ or
 
 python3 -m pip --version
 
-## -m refers to module
+### Note: -m refers to module
 
 ## install package
 python3 -m pip install package-name
