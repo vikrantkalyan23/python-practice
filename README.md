@@ -51,5 +51,9 @@ print("Hello Python")
 ## Exit from Python
 exit()
 
+or 
+
+ctl + z
+
 ## Deactivate Virtual environment
 deactivate
