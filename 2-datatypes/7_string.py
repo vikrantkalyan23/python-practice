@@ -12,7 +12,7 @@ print(f"7 onwards  : {name[7:]}")
 print(f"Reverse  : {name[::-1]}")
 print(f"Skip 2 Characters  : {name[::2]}")
 
-address ="Las vegas 😍"
+address = "Las vegas 😍"
 
 encoded_string = address.encode("utf-8")
 print(f"Encoded String : {encoded_string}")
