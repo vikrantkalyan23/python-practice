@@ -90,13 +90,13 @@ Output:
 a = 10
 b = 3
 
-print(a + b)   # 13
-print(a - b)   # 7
-print(a * b)   # 30
-print(a / b)   # 3.333...
+print(a + b)  # 13
+print(a - b)  # 7
+print(a * b)  # 30
+print(a / b)  # 3.333...
 print(a // b)  # 3
-print(a % b)   # 1
-print(a ** b)  # 1000
+print(a % b)  # 1
+print(a**b)  # 1000
 ```
 
   Operator   Meaning
@@ -220,7 +220,7 @@ You can use either:
 or:
 
 ``` python
-'Hello'
+"Hello"
 ```
 
 ### Concatenation
@@ -1154,3 +1154,34 @@ None      → no value
 > **Data types are the foundation of Python. Become comfortable
 > creating, checking, indexing, modifying, and converting the common
 > types before moving to advanced Python.**
+
+
+
+### List vs Tuple vs Set vs Dictionary
+
+| Feature    | List       | Tuple            | Set                 | Dictionary     |
+| ---------- | ---------- | ---------------- | ------------------- | -------------- |
+| Syntax     | `[]`       | `()`             | `{}`                | `{key: value}` |
+| Ordered    | Yes        | Yes              | No meaningful index | Yes            |
+| Mutable    | Yes        | No               | Yes                 | Yes            |
+| Duplicates | Yes        | Yes              | No                  | Keys: No       |
+| Indexing   | Yes        | Yes              | No                  | By key         |
+| Main use   | Collection | Fixed collection | Unique values       | Key-value data |
+
+### Simple decision rule
+
+Need ordered collection + changes?
+        ↓
+      list
+
+Need ordered collection that shouldn't change?
+        ↓
+      tuple
+
+Need unique values?
+        ↓
+       set
+
+Need key → value data?
+        ↓
+      dict
