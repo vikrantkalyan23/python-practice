@@ -119,20 +119,24 @@ print("Symmetric Difference : ", different_skills)
 # Subset — <=  (A set is a subset if all of its elements exist in another set)
 backend = {"Python", "Node.js", "Java"}
 python_stack = {"Python", "Node.js"}
-print("python_stack is subset of backend : ",python_stack <= backend)
+print("python_stack is subset of backend : ", python_stack <= backend)
 # or
 python_stack.issubset(backend)
-print("python_stack is subset of backend using issubset : ",python_stack.issubset(backend))
+print(
+    "python_stack is subset of backend using issubset : ",
+    python_stack.issubset(backend),
+)
 
 # Superset — >=
-print("backend is superset of python_stack : ",  backend >= python_stack)
-print("backend is superset of python_stack : ",  backend.issuperset(python_stack))
+print("backend is superset of python_stack : ", backend >= python_stack)
+print("backend is superset of python_stack : ", backend.issuperset(python_stack))
 
 # Disjoint Sets (Two sets are disjoint when they have no common elements)
 frontend = {"React", "Next.js"}
 backend = {"Python", "Django"}
 
-print("Disjoint Set : ",frontend.isdisjoint(backend))
+print("Disjoint Set : ", frontend.isdisjoint(backend))
+
 
 # Common Set Methods
 
@@ -177,3 +181,67 @@ print("Disjoint Set : ",frontend.isdisjoint(backend))
 # | Indexing         | No            | Yes                  |
 # | Ordered sequence | No            | Yes                  |
 # | Main purpose     | Unique values | Fixed ordered values |
+
+
+# A frozenset is basically a set that cannot be changed
+numbers = frozenset({10, 20, 30})
+print(numbers)
+print(type(numbers))
+
+# Why do we need frozenset?
+# The main reason is immutability and hashability.
+# A normal set cannot be placed inside another set:
+
+set1 = {1, 2}
+set2 = {3, 4}
+
+# This doesn't work:
+# collection = {set1, set2}
+
+# Because a normal set is mutable and therefore unhashable.
+# But a frozenset is immutable, so it can be used as a set element:
+
+set1 = frozenset({1, 2})
+set2 = frozenset({3, 4})
+collection = {set1, set2}
+print(collection)
+
+
+# Frozenset can also be a dictionary key
+# This is another important use case.
+# A normal set cannot be a dictionary key:
+
+# Invalid
+# data = {{1, 2}: "numbers"}
+
+# But a frozenset can:
+key = frozenset({1, 2})
+data = {key: "numbers"}
+print(data)
+
+
+# Normal set vs frozenset
+
+# | Feature                   | `set`        | `frozenset` |
+# | ------------------------- | ------------ | ----------- |
+# | Mutable                   | ✅ Yes        | ❌ No        |
+# | Add items                 | ✅ `add()`    | ❌           |
+# | Remove items              | ✅ `remove()` | ❌           |
+# | Duplicates                | ❌            | ❌           |
+# | Membership                | ✅            | ✅           |
+# | Union                     | ✅            | ✅           |
+# | Intersection              | ✅            | ✅           |
+# | Hashable                  | ❌            | ✅           |
+# | Can be dictionary key     | ❌            | ✅           |
+# | Can be inside another set | ❌            | ✅           |
+
+# Use frozenset when you specifically need:
+
+# An immutable set
+# A set that needs to be hashable
+# A set to be used as a dictionary key
+# A set to be stored inside another set
+
+# The key thing to remember is:
+
+# set = mutable unique collection; frozenset = immutable unique collection.
