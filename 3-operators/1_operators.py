@@ -29,3 +29,45 @@ print(result)
 # ├── 7. Bitwise Operators
 # │
 # └── 8. Conditional Expression
+
+# actions perform on data:
+
+# Numbers
+#    │
+#    ├── +  add
+#    ├── -  subtract
+#    ├── *  multiply
+#    ├── /  divide
+#    └── %  remainder
+
+# Values
+#    │
+#    ├── == compare
+#    ├── != compare
+#    ├── >  compare
+#    └── <  compare
+
+# Conditions
+#    │
+#    ├── and
+#    ├── or
+#    └── not
+
+# Collections
+#    │
+#    ├── in
+#    └── not in
+
+# Objects
+#    │
+#    ├── is
+#    └── is not
+
+# Binary
+#    │
+#    ├── &
+#    ├── |
+#    ├── ^
+#    ├── ~
+#    ├── <<
+#    └── >>
