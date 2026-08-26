@@ -227,3 +227,58 @@ for number in numbers:
         continue
 
     print(number)
+
+# break with Conditions
+for number in numbers:
+    if number == 3:
+        break
+
+    print(number)
+
+#API Example
+response = {
+    "status": 200,
+    "data": ["Ankit", "Manish"],
+}
+if response["status"] == 200:
+    print("Request successful")
+elif response["status"] == 404:
+    print("Data not found")
+elif response["status"] == 500:
+    print("Server error")
+else:
+    print("Unknown response")
+    
+# Beginner to Advanced
+# 1. True / False
+#        ↓
+# 2. Comparison operators
+#        ↓
+# 3. if
+#        ↓
+# 4. if + else
+#        ↓
+# 5. if + elif + else
+#        ↓
+# 6. Logical operators
+#        ↓
+# 7. Nested if
+#        ↓
+# 8. Truthy / Falsy
+#        ↓
+# 9. in / not in
+#        ↓
+# 10. is / is not
+#        ↓
+# 11. Conditional expressions
+#        ↓
+# 12. Conditions + loops
+#        ↓
+# 13. Guard clauses
+#        ↓
+# 14. Complex business conditions
+#        ↓
+# 15. match / case
+#        ↓
+# 16. Structural pattern matching
+
